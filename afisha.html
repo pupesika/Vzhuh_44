@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <title>О нас</title>
+</head>
+<body>
+    <section class="screenthree">
+        <div class="aboutshop">
+            <div class="heading">
+                Дом для фей
+            </div>
+            <div class="close">
+                <a href="index.html"><img src="images/Star 1.svg" alt="" id="closeicon"></a>
+            </div>
+        </div>
+
+        
+        <div class="firstLine">
+            <div class="cardPhoto" class="blinking" style="transform: rotate(-7.23deg);">
+            <img src="images/интерьер 2 1.svg" alt="" id="photo1">
+            <p id="text1">добро пожаловать!</p>
+            </div>
+            <p id="textAbout1">Именно тут живут и учатся будущей профессии маленькие феи. Их дома расположены вдали от людей и спрятаны в кронах деревьев</p>
+        </div>
+
+        <div class="firstLine">
+            <p id="textAbout1">Первый и последний этаж предназначены для отдыха. Для этого там расположены комфортные сферы</p>
+            <div class="cardPhoto"  class="blinking" style="transform: rotate(13.28deg);">
+            <img src="images/интерьер 3 1.svg" alt="" id="photo1">
+            <p id="text1">где спят феи?</p>
+            </div>
+        </div>
+
+        <div class="firstLine">
+            <div class="cardPhoto"  class="blinking" style="transform: rotate(-7.23deg);">
+                <img src="images/интерьер 4 2.svg" alt="" id="photo1">
+                <p id="text3">чем питаются феи?</p>
+            </div>
+            <p id="textAbout1">Рацион фей состоит из растений и цветов. 
+                Именно поэтому в столовой на отдельном этаже расположен небольшой сад.</p>
+        </div>
+
+        <div class="firstLine">
+            <p id="textAbout1">Перед тем как полноценно приступить к работе феям необходимо набраться опыта. 
+                В учебном центре они изучают анатомию человека и последние модные тренды.</p>
+            <div class="cardPhoto"  class="blinking" style="transform: rotate(13.28deg);">
+                <img src="images/интерьер 6 1.svg" alt="" id="photo1">
+                <p id="text1">учебный центр</p>
+            </div>
+        </div>
+
+    </div>
+    </section>
+</body>
+<script>
+let timer;
+const cards = document.querySelectorAll('.cardPhoto');
+                window.addEventListener('scroll', function() {
+                    cards.forEach(card => {
+                        card.classList.remove('blinking');
+                    });
+                    clearTimeout(timer);
+                    timer = setTimeout(() => {
+                        cards.forEach(card => {
+                            card.classList.add('blinking');
+                        });
+                    }, 500);
+                });
+                setTimeout(() => {
+                    cards.forEach(card => {
+                        card.classList.add('blinking');
+                    });
+                }, 0);
+</script>
+</html>

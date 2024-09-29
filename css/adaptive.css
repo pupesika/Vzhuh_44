@@ -1,0 +1,10 @@
+@media (max-width: 768px){
+  .products{
+    flex-direction: column;
+  }
+
+  .form{
+    flex-direction: column;
+    gap: 3vw;
+  }
+}
